@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aastha Sinha | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Aastha Sinha</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="sparkles-bg"></div>
+
+  <section id="home" class="home">
+    <div class="intro">
+      <img src="your-photo.jpg" alt="Aastha" class="profile-pic" />
+      <div class="intro-text">
+        <h1>Hey, I'm Aastha</h1>
+        <h2>I am a <span class="typed-text"></span><span class="cursor">|</span></h2>
+        <p class="bio">I’m a 2nd-year BTech Computer Science Engineering student at the University of Engineering and Management, Jaipur. I love building impactful solutions in Python, UI/UX, and the web using creative code and design.</p>
+        <div class="socials">
+          <a href="https://github.com/yourusername" target="_blank"><img src="github-icon.png" alt="GitHub"></a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="python.jpg" alt="Python Mini Projects">
+        <h3>Python Mini Projects</h3>
+        <p>Fun games, utilities, and logic-based programs to explore core Python.</p>
+      </div>
+      <div class="project-card">
+        <img src="ai.jpg" alt="AI Voice Assistant">
+        <h3>AI Voice Assistant</h3>
+        <p>Voice-powered AI system that executes tasks and helps users hands-free.</p>
+      </div>
+      <div class="project-card">
+        <img src="webdev.jpg" alt="Web Dev Projects">
+        <h3>Web Dev Projects</h3>
+        <p>Modern frontend websites using HTML, CSS, JS and creative UI/UX.</p>
+      </div>
+    </div>
+    <a href="resume.pdf" class="resume-btn" download>Download Resume</a>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="showPopup(event)">
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <textarea placeholder="What do you want to say?" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div id="popup" class="popup">Message Sent!</div>
+  </section>
+</body>
+</html>
