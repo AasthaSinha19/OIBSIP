@@ -1,0 +1,219 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #3f0d75, #6a0dad);
+  color: white;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 40px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background-color: #2c0e56;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.intro {
+  display: flex;
+  gap: 3em;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #b28dff;
+  box-shadow: 0 0 20px #caa6ff;
+}
+
+.intro-text h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.intro-text h2 {
+  font-size: 2em;
+  color: #f3e8ff;
+}
+
+.bio {
+  margin-top: 20px;
+  max-width: 500px;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Socials */
+.socials a img {
+  width: 35px;
+  margin: 0 10px;
+}
+
+/* Projects Section */
+.projects h2 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.project-grid {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.project-card {
+  background-color: #5f27cd;
+  padding: 1em;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px #a29bfe;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Resume Button */
+.resume-btn {
+  display: block;
+  margin: 30px auto 0;
+  background-color: #a29bfe;
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.resume-btn:hover {
+  background-color: #6c5ce7;
+}
+
+/* Contact Section */
+.contact h2 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact button {
+  padding: 12px;
+  background-color: #9c88ff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  background-color: #6c5ce7;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.popup.show {
+  display: block;
+}
+
+/* Sparkle Animation */
+.sparkles-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sparkles-bg::before {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: #dcd3ff;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  animation: sparkle 8s linear infinite;
+}
+
+@keyframes sparkle {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(200vw, 100vh); opacity: 0; }
+}
