@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Bubbles -->
+  <div id="bubble-container"></div>
+
+  <!-- Theme Toggle -->
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌙 / ☀️</button>
+  </div>
+
+  <!-- Temperature Converter Box -->
+  <div class="converter-box">
+    <h1 class="converter-title">TEMPERATURE CONVERTER</h1>
+    <h2>Enter the temperature below...</h2>
+
+    <select id="conversionType" onchange="convertTemp()">
+      <option value="CtoF">Celsius ➜ Fahrenheit</option>
+      <option value="FtoC">Fahrenheit ➜ Celsius</option>
+      <option value="CtoK">Celsius ➜ Kelvin</option>
+      <option value="KtoC">Kelvin ➜ Celsius</option>
+      <option value="FtoK">Fahrenheit ➜ Kelvin</option>
+      <option value="KtoF">Kelvin ➜ Fahrenheit</option>
+    </select>
+
+    <div class="field">
+      <input type="number" id="inputTemp" placeholder="Enter value" oninput="convertTemp()">
+      <label>Input</label>
+    </div>
+
+    <div class="field">
+      <input type="text" id="outputTemp" readonly placeholder="Converted">
+      <label>Result</label>
+    </div>
+
+    <div class="buttons">
+      <button onclick="resetFields()">🔄 Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
